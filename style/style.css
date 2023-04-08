@@ -1,0 +1,47 @@
+cfour-checker {
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+
+    animation: 0.2s cubic-bezier(.36,.12,.95,.46) both drop-in;
+}
+
+cfour-checker[data-color="red"] {
+    background-color: red;
+}
+
+cfour-checker[data-color="yellow"] {
+    background-color: yellow;
+}
+
+@keyframes drop-in {
+    from {
+        transform: translate(0, -350px);
+    }
+
+    to {
+        transform: translate(0, 0);
+    }
+}
+
+#cfour-board {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.cfour-column {
+    display: flex;
+    flex-flow: column-reverse nowrap;
+    background-color: darkblue;
+
+    width: 50px;
+    height: 350px;
+
+    gap: 10px;
+    padding: 10px;
+}
+
+.cfour-column:hover {
+    background-color: blue;
+}
